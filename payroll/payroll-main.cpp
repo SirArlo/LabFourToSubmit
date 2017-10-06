@@ -49,3 +49,13 @@ int main()
 	return 0;
 }
 
+
+/*2.1
+
+The code on lines 39 and 40 declare the pointers of type Employee and they only acess the print function of employee 
+before it was declare a virtual function .
+But the pointers on line 26 and 27 of type FixedRateWorker and HourlyWorker respectively and this allows them to print 
+out the function from their respective classes which includes the phrases "FixedRateWorker" and " Hourly Worker ".
+
+
+*/
