@@ -37,3 +37,8 @@ int main()
 	return 0;
 }
 
+/*3.1 
+ 
+The number of points  the smapler is using is too small to give a smooth rounded plot and so the number of points needed to be increased to 5000 instead of 50.
+ 
+ */
