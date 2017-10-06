@@ -6,6 +6,9 @@
 #include "DashedLineStyle.h"
 #include "DottedLine.h"
 #include "Points.h"
+#include "Function.h"
+#include "Exponential.h"
+#include "Polynomial.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -41,6 +44,14 @@ int main()
 	
 	DottedLine Dotted_blue{Colour::Blue, display};
 	graph.plot(generateDataPoints(cosine_function, range), Dotted_blue);
+	
+	Exponential exp{1.0, 1.5};
+    vector<float> Coeffs = {1.0, 2.0, 1.0};
+	Polynomial poly{Coeffs};
+	
+	Range FunctionRange{-3, 1.5};
+	graph.plot(generateDataPoints(poly, FunctionRange), Dashed_red);
+	graph.plot(generateDataPoints(exp, FunctionRange), Dashed_red);
 
 	return 0;
 }
